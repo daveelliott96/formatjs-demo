@@ -3,6 +3,7 @@ import './App.css'
 import IntlObjectDemo from './demos/imperative-api/intl-object-and-basic-translation'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FormattersDemo from './demos/imperative-api/formatters'
+import AdvancedTranslation from './demos/imperative-api/message-syntax'
 
 const AppContainer = styled.div`
     margin-left: 5%;
@@ -37,7 +38,7 @@ function App () {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<IntlObjectDemo/>}/>
-            <Route path='/advanced-translation' element={<h1>hello</h1>}/>
+            <Route path='/advanced-translation' element={<AdvancedTranslation/>}/>
             <Route path='/imperative-formatter' element={<FormattersDemo/>}/>
           </Routes>
         </BrowserRouter>

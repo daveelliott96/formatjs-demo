@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Select from '../../../../components/select'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { cb } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import CodeBlock from '../../../../components/CodeBlock'
 
 const DateFormatting = () => {
   const [dateOptions, setDateOptions] = useState({year: 'numeric', month: 'numeric', day: 'numeric'})
@@ -40,11 +41,9 @@ intl.formatDate(Date.now(), dateOptionsMap[dateOptions])`
 
   return (
     <Container>
-      <SyntaxHighlighter language="javascript" style={cb} customStyle={CodeBlockStyle} showLineNumbers>
-        {dateFormatString}
-      </SyntaxHighlighter>
+      <CodeBlock>{dateFormatString}</CodeBlock>
       <DemoContainer>
-        <h1>{date}</h1>
+        <h2>{date}</h2>
         <Select
           options={
             [

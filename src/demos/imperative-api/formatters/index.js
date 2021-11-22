@@ -1,4 +1,3 @@
-import { Container } from '../../../components/demo-containers'
 import { useNavigate } from 'react-router-dom'
 import DemoHeading from '../../../components/demo-heading'
 import DateFormatting from './date-formatting'
@@ -8,11 +7,11 @@ const FormattersDemo = () => {
   const navigate = useNavigate()
 
   return (
-    <Container>
+    <>
       <DemoHeading>Formatters</DemoHeading>
-      <DateFormatting />
-      <NextButton onClick={navigate('/react-provider')}/>
-    </Container>
+      <DateFormatting />  TODO: Translate dates for different locales too!!
+      <NextButton onClick={() => {navigate('/react-provider'); window.scrollTo(0,0)}}>Next: React intl basics</NextButton>
+    </>
   )
 }
 

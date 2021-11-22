@@ -4,7 +4,9 @@ import styled from 'styled-components'
 const StyledButton = styled.button`
   align-self: flex-start;
   width: 240px;
-  padding: 16px 16px 16px 16px;
+  padding: 12px 16px 12px 16px;
+  margin-left: 16px;
+  margin-right: 16px;
   background-color: ${props => props.theme.greenTwo};
   border-radius: 10px;
   border: none;
@@ -15,6 +17,9 @@ const StyledButton = styled.button`
   &:hover {
     cursor: pointer;
     background-color: ${props => props.theme.greenThree};
+  }
+  &:active {
+    background-color: ${props => props.theme.greenFour};
   }
 `
 

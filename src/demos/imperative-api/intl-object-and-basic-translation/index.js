@@ -8,6 +8,8 @@ import { CodeBlockStyle, Container, DemoContainer } from '../../../components/de
 import DynamicLocaleDemo from './dynamic-locale'
 import NextButton from '../../../components/next-demo-button'
 import { useNavigate } from 'react-router-dom'
+import CodeBlock from '../../../components/CodeBlock'
+import Notice from '../../../components/notice'
 
 const messagesString =
   `import {createIntl} from '@formatjs/intl'
@@ -86,28 +88,29 @@ const IntlObjectDemo = () => {
   return (
     <>
       <Container>
+        <Notice>Any translations or formatting using the imperative API begins with the intl object. This is where we set up the i18n context, including the dictionary of translation strings, the language to translate string into and other bits like error handling and timezones.</Notice>
         <DemoHeading>Setting up the intl object & basic text translation</DemoHeading>
-        <h3>Set up i18n dictionary</h3>
-        <SyntaxHighlighter language="javascript" style={cb} customStyle={CodeBlockStyle} showLineNumbers>
-          {messagesString}
-        </SyntaxHighlighter>
-        <h3>Initialise intl object</h3>
-        <SyntaxHighlighter language="javascript" style={cb} customStyle={CodeBlockStyle} showLineNumbers>
-          {createIntlString}
-        </SyntaxHighlighter>
-        <h3>Use intl object to get a translated string</h3>
-        <SyntaxHighlighter language="javascript" style={cb} customStyle={CodeBlockStyle} showLineNumbers>
-          {translationString}
-        </SyntaxHighlighter>
         <DemoContainer>
-          <h1>{greeting}</h1>
+          <h2>{greeting}</h2>
           <Button onClick={() => onClick()}>
             Translate to German
           </Button>
         </DemoContainer>
+        <h3>Set up i18n dictionary</h3>
+        <CodeBlock>
+          {messagesString}
+        </CodeBlock>
+        <h3>Initialise intl object</h3>
+        <CodeBlock>
+          {createIntlString}
+        </CodeBlock>
+        <h3>Use intl object to get a translated string</h3>
+        <CodeBlock>
+          {translationString}
+        </CodeBlock>
       </Container>
       <DynamicLocaleDemo/>
-      <NextButton onClick={() => navigate('/advanced-translation')}>Next: Advanced translation features</NextButton>
+      <NextButton onClick={() => {navigate('/advanced-translation'); window.scrollTo(0,0)}}>Next: Message syntax</NextButton>
     </>
   )
 }

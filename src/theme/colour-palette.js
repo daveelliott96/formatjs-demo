@@ -3,6 +3,7 @@ export default {
   greenOne: '#BCEFA7',
   greenTwo: '#277C04',
   greenThree: '#1C5534',
+  greenFour: '#091c11',
   orangeOne: '#f27324',
   blueOne: '#085E8E',
   blueTwo: '#24265a',

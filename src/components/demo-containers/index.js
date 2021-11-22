@@ -10,10 +10,12 @@ export const Container = styled.div`
 export const DemoContainer = styled.div`
     text-align: center;
     width: 100%;
+    margin-bottom: 50px;
   `
 
 export const CodeBlockStyle = {
   width: '100%',
   fontSize: '.9rem',
-  backgroundColor: '#1F1F1F'
+  backgroundColor: '#1F1F1F',
+  marginBottom: '32px'
 }

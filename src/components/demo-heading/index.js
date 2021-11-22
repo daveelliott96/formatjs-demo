@@ -7,6 +7,7 @@ const Container = styled.div`
 
 const StyledDemoHeading = styled.h1`
   margin-top: 2rem;
+  text-align: left;
 `
 
 function DemoHeading ({ children, ...props }) {
