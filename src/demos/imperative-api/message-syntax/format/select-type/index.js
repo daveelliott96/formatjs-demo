@@ -41,7 +41,7 @@ const messages = {
 const messagesString =
   `const messages = {
   'en-GB': {
-    // Set up strings for select: works similarly to a switch statement
+    // Set up strings for select: works similarly to a switch statement. The 'other' key is always required - its equivalent to a default case
     letter_received: \`{gender, select,
     male {He has}
     female {She has}
@@ -116,7 +116,7 @@ const SelectTypeDemo = () => {
 
   return (
     <Container>
-      <DemoHeading>Message syntax: Type (select)</DemoHeading>
+      <DemoHeading>Message syntax: Format (select)</DemoHeading>
       <DemoContainer>
         <h2>{text}</h2>
         <Select options={

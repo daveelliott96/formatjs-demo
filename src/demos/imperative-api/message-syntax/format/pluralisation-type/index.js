@@ -41,29 +41,29 @@ const messages = {
 const messagesString =
   `const messages = {
   'en-GB': {
-    // Set up strings for pluralisation: separate text for none, single or multiple letters
-    pending_letter: \`Hello {usersName}, {letterCount, plural,
+    // Set up strings for pluralisation: separate text for none, single or multiple letters. The 'other' key is always required - its equivalent to a default case
+    pending_letter: \`Hello {name}, {letterCount, plural,
     =0 {there are no letters} 
     one {there is one letter} 
     other {there are # letters}}
     with a status of pending.\`
   },
   'de': {
-    pending_letter: \`Hallo {usersName}, {letterCount, plural,
+    pending_letter: \`Hallo {name}, {letterCount, plural,
     =0 {es gibt keine buchstaben}
     one {es gibt einen buchstaben}
     other {es gibt # buchstaben}}
     mit dem status ausstehend.\`
   },
   'es': {
-    pending_letter: \`Hola {usersName}, {letterCount, plural,
+    pending_letter: \`Hola {name}, {letterCount, plural,
     =0 {no hay cartas}
     one {hay una carta}
     other {hay # cartas}}
     con un estado de pendiente.\`
   },
   'fr': {
-    pending_letter: \`Bonjour {usersName}, {letterCount, plural,
+    pending_letter: \`Bonjour {name}, {letterCount, plural,
     =0 {il n'y a pas de lettres}
     one {il y a une lettre}
     other {il y a # lettres}}
@@ -87,7 +87,7 @@ const translationString =
     id: 'pending_letter',
     defaultMessage: messages[defaultLocale].pending_letter
   },
-  { usersName: usersName, letterCount: letterCount }
+  { name: usersName, letterCount: letterCount } // Set the keys name and letterCount to have a value of our user defined usersName and letterCount variables
 )`
 
 const PluralisationDemo = () => {
@@ -117,7 +117,7 @@ const PluralisationDemo = () => {
 
   return (
     <Container>
-      <DemoHeading>Message syntax: Type (plural)</DemoHeading>
+      <DemoHeading>Message syntax: Format (plural)</DemoHeading>
       <DemoContainer>
         <h2>{text}</h2>
         <NumberInput onChange={(e) => setLetterCount(e.target.value)} min={0} value={letterCount}/>

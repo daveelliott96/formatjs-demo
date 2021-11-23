@@ -40,6 +40,8 @@ function App () {
             <Route path='/' element={<IntlObjectDemo/>}/>
             <Route path='/advanced-translation' element={<AdvancedTranslation/>}/>
             <Route path='/imperative-formatter' element={<FormattersDemo/>}/>
+            <Route path='/react-provider' element={<FormattersDemo/>}/>
+            <Route path='/react-translation-and-formatter' element={<FormattersDemo/>}/>
           </Routes>
         </BrowserRouter>
       </AppContainer>
