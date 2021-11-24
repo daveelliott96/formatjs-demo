@@ -4,6 +4,7 @@ import IntlObjectDemo from './demos/imperative-api/intl-object-and-basic-transla
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FormattersDemo from './demos/imperative-api/formatters'
 import AdvancedTranslation from './demos/imperative-api/message-syntax'
+import IntlReactDemo from './demos/intl-react'
 
 const AppContainer = styled.div`
     margin-left: 5%;
@@ -40,8 +41,7 @@ function App () {
             <Route path='/' element={<IntlObjectDemo/>}/>
             <Route path='/advanced-translation' element={<AdvancedTranslation/>}/>
             <Route path='/imperative-formatter' element={<FormattersDemo/>}/>
-            <Route path='/react-provider' element={<FormattersDemo/>}/>
-            <Route path='/react-translation-and-formatter' element={<FormattersDemo/>}/>
+            <Route path='/react-comparison' element={<IntlReactDemo/>}/>
           </Routes>
         </BrowserRouter>
       </AppContainer>

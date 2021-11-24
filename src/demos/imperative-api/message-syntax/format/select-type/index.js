@@ -4,8 +4,6 @@ import { createIntl } from '@formatjs/intl'
 import { useEffect, useState } from 'react'
 import Select from '../../../../../components/select'
 import CodeBlock from '../../../../../components/CodeBlock'
-import TextBox from '../../../../../components/text-box'
-import NumberInput from '../../../../../components/number-input'
 
 const messages = {
   'en-GB': {
@@ -116,7 +114,7 @@ const SelectTypeDemo = () => {
 
   return (
     <Container>
-      <DemoHeading>Message syntax: Format (select)</DemoHeading>
+      <DemoHeading>Message syntax: Select</DemoHeading>
       <DemoContainer>
         <h2>{text}</h2>
         <Select options={

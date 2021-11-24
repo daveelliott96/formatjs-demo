@@ -1,7 +1,5 @@
-import { CodeBlockStyle, Container, DemoContainer } from '../../../../components/demo-containers'
+import { Container, DemoContainer } from '../../../../components/demo-containers'
 import DemoHeading from '../../../../components/demo-heading'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import { createIntl } from '@formatjs/intl'
 import { useEffect, useState } from 'react'
 import Button from '../../../../components/demo-button'
@@ -28,16 +26,16 @@ const messagesString =
 `// Define our messages - variables are declared in curly brackets {}
 const messages = {
   'en-GB': {
-    click_count: 'You have clicked the button {count} times'
+    click_count: 'Hello {name}, you have clicked the button {count} times'
   },
   'de': {
-    click_count: 'Sie haben die Schaltfläche {count} Mal angeklickt'
+    click_count: 'Hallo {name}, sie haben die Schaltfläche {count} Mal angeklickt'
   },
   'es': {
-    click_count: 'Has pulsado el botón {count} veces'
+    click_count: 'Hola {name}, has pulsado el botón {count} veces'
   },
   'fr': {
-    click_count: 'Vous avez cliqué sur le bouton {count} fois'
+    click_count: 'Bonjour {name}, vous avez cliqué sur le bouton {count} fois'
   }
 }`
 

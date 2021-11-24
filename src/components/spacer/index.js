@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Spacer = styled.div`
-  height: 150px;
+  height: 120px;
   width: 100%;
 `
 

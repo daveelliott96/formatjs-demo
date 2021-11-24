@@ -117,7 +117,7 @@ const PluralisationDemo = () => {
 
   return (
     <Container>
-      <DemoHeading>Message syntax: Format (plural)</DemoHeading>
+      <DemoHeading>Message syntax: Plural</DemoHeading>
       <DemoContainer>
         <h2>{text}</h2>
         <NumberInput onChange={(e) => setLetterCount(e.target.value)} min={0} value={letterCount}/>

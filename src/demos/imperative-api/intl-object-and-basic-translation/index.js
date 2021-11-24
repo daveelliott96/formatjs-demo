@@ -1,10 +1,8 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { cb } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import { createIntl } from '@formatjs/intl'
 import { useState } from 'react'
 import Button from '../../../components/demo-button'
 import DemoHeading from '../../../components/demo-heading'
-import { CodeBlockStyle, Container, DemoContainer } from '../../../components/demo-containers'
+import { Container, DemoContainer } from '../../../components/demo-containers'
 import DynamicLocaleDemo from './dynamic-locale'
 import NextButton from '../../../components/next-demo-button'
 import { useNavigate } from 'react-router-dom'
@@ -88,8 +86,8 @@ const IntlObjectDemo = () => {
   return (
     <>
       <Container>
-        <Notice>Any translations or formatting using the imperative API begins with the intl object. This is where we set up the i18n context, including the dictionary of translation strings, the language to translate string into and other bits like error handling and timezones.</Notice>
-        <DemoHeading>Setting up the intl object & basic text translation</DemoHeading>
+        <Notice>Any translations or formatting using the imperative API begins with the intl object. This is where we set up the i18n context, including the dictionary of translation strings, the language to translate strings into (locale) and other bits like error handling and timezones.</Notice>
+        <DemoHeading>Creating an I18n context with the intl object & basic text translation</DemoHeading>
         <DemoContainer>
           <h2>{greeting}</h2>
           <Button onClick={() => onClick()}>

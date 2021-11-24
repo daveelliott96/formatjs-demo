@@ -15,7 +15,7 @@ const FormattersDemo = () => {
       <NumberFormatting />
       <Spacer />
       <CurrencyFormatting />
-      <NextButton onClick={() => {navigate('/react-provider'); window.scrollTo(0,0)}}>Next: React intl basics</NextButton>
+      <NextButton onClick={() => {navigate('/react-comparison'); window.scrollTo(0,0)}}>Next: React Intl integration</NextButton>
     </>
   )
 }
